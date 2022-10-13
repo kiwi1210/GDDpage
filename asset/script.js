@@ -79,6 +79,24 @@ function chg() {
       img = L.imageOverlay(imageUrl, imageBounds, options);
       img.addTo(map);
 	  break;
+    case "2451tmp":
+	  imageUrl = "data/cluster245_2020_2030.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+        case "2452tmp":
+	  imageUrl = "data/cluster245_2050_2060.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+        case "2453tmp":
+	  imageUrl = "data/cluster245_2080_2090.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
 	case "5851tmp":
 	  imageUrl = "data/cluster585_2020_2030.png";
 	  map.removeLayer(img);
@@ -115,6 +133,24 @@ function chg() {
       img = L.imageOverlay(imageUrl, imageBounds, options);
       img.addTo(map);
 	  break;
+	case "2451tmpdiff":
+	  imageUrl = "data/cluster245_2020_2030_diff.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+	case "2452tmpdiff":
+	  imageUrl = "data/cluster245_2050_2060_diff.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+	case "2453tmpdiff":
+	  imageUrl = "data/cluster245_2080_2090_diff.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
 	case "5851tmpdiff":
 	  imageUrl = "data/cluster585_2020_2030_diff.png";
 	  map.removeLayer(img);
@@ -147,6 +183,24 @@ function chg() {
 	  break;
 	case "1263cluster":
 	  imageUrl = "data/cluster126_2080_2090_label.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+	case "2451cluster":
+	  imageUrl = "data/cluster245_2020_2030_label.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+	case "2452cluster":
+	  imageUrl = "data/cluster245_2050_2060_label.png";
+	  map.removeLayer(img);
+      img = L.imageOverlay(imageUrl, imageBounds, options);
+      img.addTo(map);
+	  break;
+	case "2453cluster":
+	  imageUrl = "data/cluster245_2080_2090_label.png";
 	  map.removeLayer(img);
       img = L.imageOverlay(imageUrl, imageBounds, options);
       img.addTo(map);
