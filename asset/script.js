@@ -1,8 +1,11 @@
-var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+var map = L.map("map").setView([23.5, 121], 7);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
 });
 
 var layer = L.leafletGeotiff("data/all2015_235_210_Cn0_0.50.tif", bounds=[[25.0001, 121.3747], [25.1249, 121.50035]]);
+layer.addTo(map);
 
 var ssp = document.getElementById("ssp").value;
 var year = document.getElementById("year").value;
@@ -11,9 +14,7 @@ var imageUrl = "data/cluster126_2020_2030.png";
 var imageBounds = [[21.892524, 119.992799], [25.278324, 122.025899]];
 var options = {opacity: 1};
 var img = L.imageOverlay(imageUrl, imageBounds, options);
-
-var layers = L.layerGroup([layer, img]);
-var map = L.map("map", {layers: [osm, layers]}).setView([23.5, 121], 7);
+img.addTo(map);
 
 
 document.getElementById("alpha").addEventListener("change", chgAlpha);
