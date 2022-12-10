@@ -13,6 +13,16 @@ var options = {opacity: 1};
 var img = L.imageOverlay(imageUrl, imageBounds, options);
 img.addTo(map);
 
+<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/geotiff@0.4.1/dist/main.js"></script>
+<script src="https://unpkg.com/plotty@0.2.0/src/plotty.js"></script>
+<script src="leaflet-geotiff.js"></script>
+<!-- Load any renderer you need -->
+<script src="leaflet-geotiff-plotty.js"></script>
+<script src="leaflet-geotiff-vector.js"></script>
+// Create map
+var layer = L.leafletGeotiff("data/all2015_235_210_Cn0_0.50.tif", bounds=[[25.0001, 121.3747], [25.1249, 121.50035]]).addTo(map);
+
 document.getElementById("alpha").addEventListener("change", chgAlpha);
 document.getElementById("ssp").addEventListener("change", chgSsp);
 document.getElementById("year").addEventListener("change", chgYear);
