@@ -13,6 +13,11 @@ var options = {opacity: 1};
 var img = L.imageOverlay(imageUrl, imageBounds, options);
 img.addTo(map);
 
+var tiffUrl = 'data/all2015_235_210_Cn0_0.50.png';
+var tiffBounds = [[25.0001, 121.3747], [25.1249, 121.50035]];
+var tiffLayer = L.imageOverlay(tiffUrl, tiffBounds);
+tiffLayer.addTo(map);
+
 document.getElementById("alpha").addEventListener("change", chgAlpha);
 document.getElementById("ssp").addEventListener("change", chgSsp);
 document.getElementById("year").addEventListener("change", chgYear);
