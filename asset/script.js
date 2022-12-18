@@ -4,11 +4,6 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
 }).addTo(map);
 
-var tiffUrl = 'data/all2015_235_210_Cn0_050_W.tif';
-var tiffBounds = [[24.999483, 121.373659], [25.125494, 121.500638]];
-var tiffLayer = L.leafletGeotiff(tiffUrl, tiffBounds);
-tiffLayer.addTo(map);
-
 var ssp = document.getElementById("ssp").value;
 var year = document.getElementById("year").value;
 var gdd = document.getElementById("gdd").value;
