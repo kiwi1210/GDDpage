@@ -4,6 +4,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
 }).addTo(map);
 
+L.leafletGeotiff(url="data/all2015_235_210_Cn0_050_W.tif", options={displayMin:0,displayMax:5,colorScale:"rainbow"}).addTo(map);
+
 var ssp = document.getElementById("ssp").value;
 var year = document.getElementById("year").value;
 var gdd = document.getElementById("gdd").value;
